@@ -1,0 +1,228 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-bar-outer-frame {
+        background-color: rgb(72, 83, 83);
+        margin: 0px;
+        display: flex;
+        width: 100%;
+        height: 120px;
+
+    }
+
+    .nav-bar-frame1 {
+        background-color: rgb(122, 193, 211);
+        width: 100%;
+        position: absolute;
+        height: 70px
+    }
+
+    .nav-bar-frame2 {
+        background-color: rgb(88, 88, 66);
+        width: 100%;
+        position: absolute;
+        height: 50px;
+        margin-top: 70px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0;
+    }
+
+    .categorie-list {
+        list-style: none;
+        list-style-type: none;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        padding: 0;
+        background-color: yellow;
+        display: inline-block;
+    }
+
+    li a {
+        text-decoration: none;
+        color: black;
+        text-align: center;
+    }
+
+    ul li {
+        display: inline-block;
+        margin: 0 13px;
+        font-family: "Nunito Sans", sans-serif;
+        ;
+        font-weight: 700;
+        font-size: 12px;
+
+    }
+
+    li:hover {
+        text-decoration: underline;
+    }
+
+    .add-item-button {
+        width: 220px;
+        height: 28px;
+        background-color: green;
+        position: absolute;
+        top: 11px;
+        right: 20px;
+        border-radius: 10px;
+        outline: none;
+        border-style: none;
+        text-decoration: none;
+        color: black;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        
+    }
+    .add-item-button:hover {
+
+        transform: scale(1.03);
+    }
+
+    .add-item-button-text {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16;
+        font-weight: 600;
+    }
+
+    .faq {
+        width: 220px;
+        height: 28px;
+        background-color: green;
+        position: absolute;
+        top: 11px;
+        left: 20px;
+        border-radius: 10px;
+    }
+
+    .main-item-grid {
+        padding-top: 20px;
+        display: grid;
+        height: 100%;
+        width: 100%;
+        /* grid-template-rows: 408px; */
+        background-color: beige;
+        grid-template-columns: auto auto auto auto auto;
+        gap: 20px;
+        justify-content: center;
+        box-sizing: border-box;
+
+    }
+
+    .item {
+        background-color: gray;
+        height: 480px;
+        width: 370px;
+        border: 2px solid darkgray;
+        border-radius: 10px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+    .item:hover {
+        transform: scale(1.01);
+        
+    }
+
+    .item-image {
+        background-color: blue;
+        padding-bottom: 240px;
+    }
+
+    .item-information {
+        margin-top: 85;
+        margin-left: 10px;
+    }
+
+    .item-name {
+        font-size: 22px;
+        font-weight: 400;
+        font-family: sans-serif;
+        padding: 0;
+        margin-bottom: 15;
+        
+    }
+
+    .item-price {
+        font-size: 20px;
+        font-family: sans-serif;
+        font-weight: 700;
+        padding: 0;
+        margin-top: 0;
+    }
+    .buy-button {
+        justify-content: center;
+        text-align: center;
+    }
+    .button-text {
+        font-size: 20px;
+        font-family: sans-serif;
+    }
+</style>
+
+<body class="body">
+    <nav>
+        <div class="nav-bar-outer-frame">
+            <div class="nav-bar-frame1">
+                <!-- <div class="nav1-element">Home</div>
+            <div class="nav1-element">Products</div>
+            <div class="nav1-element">FAQ</div> -->
+            </div>
+            <div class="nav-bar-frame2">
+
+                <ul class="categorie-list">
+                    <li><a href="">Shoes</a></li>
+                    <li><a href="">Hoodies/sweater</a></li>
+                    <li><a href="">T-Shirts</a></li>
+                    <li><a href="">Jackets</a></li>
+                    <li><a href="">Pants/shorts</a></li>
+                    <li><a href="">Headwear</a></li>
+                    <li><a href="">accesoiries</a></li>
+                    <li><a href="">miscealanus</a></li>
+                </ul>
+                <a href="/additem" class="add-item-button"><p class="add-item-button-text">Add item</p></a> 
+                <div class="faq">
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="main-item-grid">
+        <div class="item"></div>
+        <div class="item">
+            <div class="item-image"> </div>
+            <div class="item-information">
+                <p class="item-name">Panda Dunks</p>
+                <p class="item-price">100€</p>
+            </div>
+            <div class="buy-button"><p class="button-text">buy</p></div>
+        </div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main-box-frame {
+        width: 100%;
+        background-color: beige;
+        height: 900px;
+        margin-top: 7%;
+        display: flex;
+        justify-content: center;
+    }
+
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    .main-box {
+        width: 1000px;
+        height: 100%;
+        background-color: aqua;
+        display: flex;
+        justify-content: right;
+    }
+
+    .image-box {
+        height: 280px;
+        width: 200px;
+        background-color: lightblue; 
+    }
+
+    /* .titel {
+        width: 400px;
+        height: 80px;
+        background-color: green;
+    } */
+    .info-frame {
+        width: 100%;
+        height: 100%;
+        background-color: green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }   
+
+    .image-frame {
+        height: 100%;
+        width: 300px;
+        background-color: darkblue;
+        right: 0;
+
+    }
+    input[type=text], select {
+        width: 400px;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    input[type=submit], select {
+        width: 400px;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    .input-form {
+        display: flex;
+        flex-direction: column;
+       
+    }
+
+    .nav-bar-outer-frame {
+        background-color: rgb(72, 83, 83);
+        margin: 0px;
+        display: flex;
+        width: 100%;
+        height: 120px;
+        padding: 0;
+
+    }
+    nav {
+        padding: 0;
+        margin: 0;
+    }
+    .nav-bar-frame1 {
+        background-color: rgb(122, 193, 211);
+        width: 100%;
+        position: absolute;
+        height: 70px
+    }
+
+    .nav-bar-frame2 {
+        background-color: rgb(88, 88, 66);
+        width: 100%;
+        position: absolute;
+        height: 50px;
+        margin-top: 70px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0;
+    }
+
+    .categorie-list {
+        list-style: none;
+        list-style-type: none;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        padding: 0;
+        background-color: yellow;
+        display: inline-block;
+    }
+
+    li a {
+        text-decoration: none;
+        color: black;
+        text-align: center;
+    }
+
+    ul li {
+        display: inline-block;
+        margin: 0 13px;
+        font-family: "Nunito Sans", sans-serif;
+        ;
+        font-weight: 700;
+        font-size: 12px;
+
+    }
+
+    li:hover {
+        text-decoration: underline;
+    }
+
+    .add-item-button {
+        width: 220px;
+        height: 28px;
+        background-color: green;
+        position: absolute;
+        top: 11px;
+        right: 20px;
+        border-radius: 10px;
+        outline: none;
+        border-style: none;
+        text-decoration: none;
+        color: black;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        
+    }
+    .add-item-button:hover {
+
+        transform: scale(1.03);
+    }
+
+    .add-item-button-text {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16;
+        font-weight: 600;
+    }
+
+    .faq {
+        width: 220px;
+        height: 28px;
+        background-color: green;
+        position: absolute;
+        top: 11px;
+        left: 20px;
+        border-radius: 10px;
+    }
+
+</style>
+
+<body>
+    <nav>
+        <div class="nav-bar-outer-frame">
+            <div class="nav-bar-frame1">
+                <!-- <div class="nav1-element">Home</div>
+            <div class="nav1-element">Products</div>
+            <div class="nav1-element">FAQ</div> -->
+            </div>
+            <div class="nav-bar-frame2">
+
+                <ul class="categorie-list">
+                    <li><a href="">Shoes</a></li>
+                    <li><a href="">Hoodies/sweater</a></li>
+                    <li><a href="">T-Shirts</a></li>
+                    <li><a href="">Jackets</a></li>
+                    <li><a href="">Pants/shorts</a></li>
+                    <li><a href="">Headwear</a></li>
+                    <li><a href="">accesoiries</a></li>
+                    <li><a href="">miscealanus</a></li>
+                </ul>
+                <a href="/additem" class="add-item-button"><p class="add-item-button-text">Add item</p></a> 
+                <div class="faq">
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="main-box-frame">
+
+        <div class="main-box">
+            <div class="info-frame">
+                <form action="{% url 'update_db' %}" class="input-form" method="post">
+                    {% csrf_token %}
+                    <input type="text" name="item_name">
+                    <input type="text" name="link">
+                    <input type="text" name="price">
+                    <input type="submit" name="submit" value="submit" id="submit">
+                </form>
+                
+                
+            </div>
+            <div class="image-frame">
+                <div class="image-box"></div>
+            </div>
+        </div>
+</body>
+
+</html>
