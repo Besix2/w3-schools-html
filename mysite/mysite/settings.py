@@ -141,10 +141,14 @@ LOGGING = {
         },
     },
     'loggers': {
-        'mylogger': {
+        'logger': {
             'handlers': ['console'],
-            'level': os.getenv('DJANGO_LOG_LEVEL', 'INFO'),
+            'level': "DEBUG",
             'propagate': True,
         },
     },
 }
+
+
+MEDIA_URL = '/additem/media/'  # This is the URL prefix for your media files.
+MEDIA_ROOT = os.path.join(BASE_DIR,'additem', 'media')
